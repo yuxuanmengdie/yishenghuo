@@ -10,4 +10,8 @@
 
 @interface YSHBodyTestViewController : UIViewController
 
+
+///是否男性
+@property (assign, nonatomic) BOOL isMale;
+
 @end

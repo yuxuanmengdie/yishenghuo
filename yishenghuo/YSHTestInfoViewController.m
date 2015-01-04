@@ -7,6 +7,7 @@
 //
 
 #import "YSHTestInfoViewController.h"
+#import "YSHBodyTestViewController.h"
 
 @interface YSHTestInfoViewController ()<UITextFieldDelegate>
 
@@ -43,7 +44,7 @@ static NSString *const kBodyTestIdentifier = @"bodyTest";
     _nameTextField.text = nil;
     _nameTextField.placeholder = @"请输入";
     _nameTextField.delegate = self;
-    [publicFuncClass addHiddenItemOnkeyboardWithView:_nameTextField delegate:self sel:@selector(hiddenKeyBoard)];
+//    [publicFuncClass addHiddenItemOnkeyboardWithView:_nameTextField delegate:self sel:@selector(hiddenKeyBoard)];
     _sepView.backgroundColor = KMainColor;
     _sexSegment.tintColor = KMainColor;
 
@@ -60,15 +61,19 @@ static NSString *const kBodyTestIdentifier = @"bodyTest";
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    YSHBodyTestViewController *testVC = [segue destinationViewController];
+    testVC.isMale = _sexSegment.selectedSegmentIndex == 0;
+    
 }
-*/
+
 
 - (void)hiddenKeyBoard
 {

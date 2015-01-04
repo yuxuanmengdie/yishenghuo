@@ -26,6 +26,8 @@ UITableViewDataSource
     YSHBodyTestCell *_testCell;
     YSHTestTableHeadView *headView;
     
+    UIButton *confirmBtn;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *testTableView;
@@ -81,7 +83,21 @@ static NSString *const kTestCell = @"bodyTestCell";
    
     hView.frame = CGRectMake(0, 0, 0, hei);
     self.testTableView.tableHeaderView = hView;
-    self.testTableView.tableFooterView = nil;
+    
+    
+    
+    confirmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [confirmBtn setTitle:@"提交" forState:UIControlStateNormal];
+    [confirmBtn setBackgroundImage:[publicFuncClass ImageWithColor:KMainColor] forState:UIControlStateNormal];
+    confirmBtn.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+    confirmBtn.enabled = NO;
+    [confirmBtn addTarget:self action:@selector(confirmAction) forControlEvents:UIControlEventTouchDragInside];
+    
+    [confirmBtn sizeToFit];
+    
+    self.testTableView.tableFooterView = confirmBtn;
+    
+    
     
 //    [headView updateConstraintsIfNeeded];
 //    [headView layoutIfNeeded];
@@ -101,11 +117,14 @@ static NSString *const kTestCell = @"bodyTestCell";
 {
     [super viewDidAppear:animated];
     
-
     
     NSLog(@"%@ %@",_testTableView.tableHeaderView,headView);
 }
 
+- (void)confirmAction
+{
+    [self scoreResult];
+}
 
 - (void)initQuestionArray
 {
@@ -121,9 +140,20 @@ static NSString *const kTestCell = @"bodyTestCell";
 //    NSArray *arr = [[JSONModel alloc] initWithString:str error:nil];
     [arr enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
         YSHBodyTestModel *model = [[YSHBodyTestModel alloc] initWithDictionary:obj error:nil];
+        if (_isMale && idx == 7+8+8+8+6-1) {
+            
+        }
+        else if (!_isMale && idx == 7+8+8+8+6)
+        {
+            
+        }
+        else{
+        
+        
         [tmp addObject:model];
+        }
     }];
-    
+
     _questionArray = tmp;
 }
 
@@ -201,6 +231,10 @@ static NSString *const kTestCell = @"bodyTestCell";
                         
                          [swself.testTableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:indexPath.row+1 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
                     }
+                    else
+                    {
+                        swself->confirmBtn.enabled = YES;
+                    }
                    
                 }
                 else
@@ -270,10 +304,77 @@ static NSString *const kTestCell = @"bodyTestCell";
 #pragma mark 根据 indexPath 返回
 - (NSString *)keyFromIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *result = [NSString stringWithFormat:@"%d",indexPath.row];
+    NSString *result = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
     return result;
 }
 
+#pragma mark 计算分数
+- (void)scoreResult
+{
+    /// 7 8 8 8 6 7 7 7 8 每种体质题目的数目
+    /// 转化分数=[（原始分-条目数）/（条目数×4）] ×100
+    
+    NSMutableArray *scoreArr = [@[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0] mutableCopy];
+    
+    [_answerDic enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSNumber *obj, BOOL *stop) {
+        int index = [key intValue];
+        
+        int arrIndex=0;
+        if (0 <=index && index < 7) {//阳虚质
+            arrIndex = 0;
+           
+        }
+        else if (index >= 7 && index < 7+8) //阴虚质
+        {
+            
+             arrIndex = 1;
+        }
+        else if (index >=7+8 && index < 7+8+8) // 气虚质
+        {
+           
+             arrIndex = 2;
+        }
+        else if (index >=7+8+8 && index < 7+8+8+8) //痰湿质
+        {
+            arrIndex = 3;
 
+        }
+        else if (index >=7+8+8+8 && index < 7+8+8+8+6)//湿热质
+        {
+             arrIndex = 4;
+        }
+        else if (index >=7+8+8+8+6 && index < 7+8+8+8+6+7) //血瘀质
+        {
+            arrIndex = 5;
+
+        }
+        else if (index >=7+8+8+8+6+7 && index < 7+8+8+8+6+7+7) //特禀质
+        {
+             arrIndex = 6;
+
+        }
+        else if (index >=7+8+8+8+6+7+7 && index < 7+8+8+8+6+7+7+7) //气郁质
+        {
+            arrIndex = 7;
+
+        }
+        else if (index >=7+8+8+8+6+7+7 && index < 7+8+8+8+6+7+7+7+8) //平和质
+        {
+             arrIndex = 8;
+        }
+        
+        
+        int num = [scoreArr[arrIndex] intValue];
+        num += [obj intValue];
+        scoreArr[arrIndex] = [NSNumber numberWithInt:num];
+
+    }];
+    
+    NSLog(@"%@",scoreArr);
+    
+    NSArray *array2 = [scoreArr sortedArrayUsingSelector:@selector(compare:)];
+    
+    NSLog(@"array2:%@", array2);
+}
 
 @end
