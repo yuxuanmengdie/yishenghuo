@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="YSHTestTableHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="体质检测" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dB-dN-dNh">
+                    <rect key="frame" x="8" y="8" width="80" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zba-wx-UME">
+                    <rect key="frame" x="8" y="40" width="302" height="24"/>
+                    <attributedString key="attributedText">
+                        <fragment content="请根据最近三个月的体验和感觉回答以下问题，孕妇及16岁以下青少年不建议使用本测试">
+                            <attributes>
+                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <font key="NSFont" size="12" name="STHeitiSC-Light"/>
+                                <font key="NSOriginalFont" size="15" name="STHeitiSC-Light"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Zba-wx-UME" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="8" id="BNk-fe-dx4"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2dB-dN-dNh" secondAttribute="trailing" constant="8" id="Lz8-KY-7Xu"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Zba-wx-UME" secondAttribute="bottom" constant="8" id="OqD-hp-iPD"/>
+                <constraint firstItem="2dB-dN-dNh" firstAttribute="top" secondItem="1" secondAttribute="top" constant="8" id="S2w-Sm-zmM"/>
+                <constraint firstItem="Zba-wx-UME" firstAttribute="top" secondItem="2dB-dN-dNh" secondAttribute="bottom" constant="8" id="Zrc-Xr-tbk"/>
+                <constraint firstItem="2dB-dN-dNh" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="8" id="mjJ-KJ-FaN"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zba-wx-UME" secondAttribute="trailing" constant="8" id="tO9-Eg-PAy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="detailLabel" destination="Zba-wx-UME" id="xKy-D1-tfT"/>
+                <outlet property="titleLabel" destination="2dB-dN-dNh" id="Sfd-2b-fQe"/>
+            </connections>
+            <point key="canvasLocation" x="260" y="286"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

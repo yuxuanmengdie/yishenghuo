@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YSHActivityTableCell">
+            <connections>
+                <outlet property="mainTitleLabel" destination="whR-g3-fel" id="wmh-a5-vry"/>
+                <outlet property="mySwitch" destination="7Fp-cD-v8e" id="rjI-WN-Ssx"/>
+                <outlet property="rightBtnTrailConstraint" destination="sjt-r3-20y" id="bhg-ju-D7P"/>
+                <outlet property="rightLabel" destination="KZi-Ar-VJ2" id="aMn-wn-Hp3"/>
+                <outlet property="subHead" destination="fA8-oC-WDl" id="aJa-hm-gA0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5no-Bd-0Hh">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5no-Bd-0Hh" id="zan-MG-Acu">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whR-g3-fel">
+                        <rect key="frame" x="8" y="13" width="38" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Labelddddddd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA8-oC-WDl">
+                        <rect key="frame" x="49" y="16" width="82" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZi-Ar-VJ2">
+                        <rect key="frame" x="217" y="13" width="38" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Fp-cD-v8e">
+                        <rect key="frame" x="263" y="6" width="51" height="31"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <action selector="switchAction:" destination="-1" eventType="valueChanged" id="Kne-pT-5Sa"/>
+                        </connections>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="7Fp-cD-v8e" secondAttribute="centerY" id="80P-xp-i4r"/>
+                    <constraint firstItem="fA8-oC-WDl" firstAttribute="baseline" secondItem="whR-g3-fel" secondAttribute="baseline" id="HJw-Sx-R8O"/>
+                    <constraint firstAttribute="trailing" secondItem="7Fp-cD-v8e" secondAttribute="trailing" constant="8" id="PBa-NB-hHz"/>
+                    <constraint firstItem="KZi-Ar-VJ2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fA8-oC-WDl" secondAttribute="trailing" constant="8" id="VXQ-mG-xc1"/>
+                    <constraint firstItem="fA8-oC-WDl" firstAttribute="leading" secondItem="whR-g3-fel" secondAttribute="trailing" constant="3" id="aWF-CA-hYL"/>
+                    <constraint firstItem="whR-g3-fel" firstAttribute="leading" secondItem="zan-MG-Acu" secondAttribute="leading" constant="8" id="abM-8E-blp"/>
+                    <constraint firstAttribute="centerY" secondItem="whR-g3-fel" secondAttribute="centerY" id="dF4-U6-4Df"/>
+                    <constraint firstItem="fA8-oC-WDl" firstAttribute="baseline" secondItem="KZi-Ar-VJ2" secondAttribute="baseline" id="sAY-FA-mQ9"/>
+                    <constraint firstItem="7Fp-cD-v8e" firstAttribute="leading" secondItem="KZi-Ar-VJ2" secondAttribute="trailing" constant="8" id="sjt-r3-20y"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YSHCategoryFilteView">
+            <connections>
+                <outlet property="firstTableView" destination="vGm-ky-Znl" id="f5g-ON-jwg"/>
+                <outlet property="secondTableView" destination="2Hs-MP-wsM" id="Mws-27-wYf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vGm-ky-Znl">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2Hs-MP-wsM">
+                    <rect key="frame" x="300" y="0.0" width="300" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vGm-ky-Znl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1Le-rL-8Wi"/>
+                <constraint firstItem="vGm-ky-Znl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ltn-nq-cmB"/>
+                <constraint firstItem="2Hs-MP-wsM" firstAttribute="width" secondItem="vGm-ky-Znl" secondAttribute="width" id="O1H-UE-Vi2"/>
+                <constraint firstItem="2Hs-MP-wsM" firstAttribute="leading" secondItem="vGm-ky-Znl" secondAttribute="trailing" id="QcB-Yk-mLe"/>
+                <constraint firstAttribute="bottom" secondItem="2Hs-MP-wsM" secondAttribute="bottom" id="QmJ-pF-VMS"/>
+                <constraint firstAttribute="bottom" secondItem="vGm-ky-Znl" secondAttribute="bottom" id="bNW-ha-1TA"/>
+                <constraint firstItem="2Hs-MP-wsM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fpo-cd-9kf"/>
+                <constraint firstAttribute="trailing" secondItem="2Hs-MP-wsM" secondAttribute="trailing" id="j1w-yh-2OU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>
