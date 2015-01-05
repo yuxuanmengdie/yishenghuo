@@ -82,6 +82,7 @@
 		F68332E11A471AE900DEC2D1 /* YSHTestTableHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68332E01A471AE900DEC2D1 /* YSHTestTableHeadView.xib */; };
 		F683951B1A2377D6008D6001 /* YSHSamesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F683951A1A2377D6008D6001 /* YSHSamesModel.m */; };
 		F683951F1A237923008D6001 /* YSHBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F683951E1A237923008D6001 /* YSHBusinessViewController.m */; };
+		F6AEB15F1A5AE7A000C7C19D /* YSHBodyTestResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB15E1A5AE7A000C7C19D /* YSHBodyTestResultViewController.m */; };
 		F6F646AA1A1B941E002C2804 /* YSHAbMerchantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F646A91A1B941E002C2804 /* YSHAbMerchantModel.m */; };
 		F6F646AD1A1B9C95002C2804 /* YSHMerchant_listModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F646AC1A1B9C95002C2804 /* YSHMerchant_listModel.m */; };
 		F6F646B01A1BA11B002C2804 /* YSHYSHBodyDicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F646AF1A1BA11B002C2804 /* YSHYSHBodyDicModel.m */; };
@@ -295,6 +296,8 @@
 		F683951A1A2377D6008D6001 /* YSHSamesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHSamesModel.m; sourceTree = "<group>"; };
 		F683951D1A237923008D6001 /* YSHBusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHBusinessViewController.h; sourceTree = "<group>"; };
 		F683951E1A237923008D6001 /* YSHBusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHBusinessViewController.m; sourceTree = "<group>"; };
+		F6AEB15D1A5AE7A000C7C19D /* YSHBodyTestResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHBodyTestResultViewController.h; sourceTree = "<group>"; };
+		F6AEB15E1A5AE7A000C7C19D /* YSHBodyTestResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHBodyTestResultViewController.m; sourceTree = "<group>"; };
 		F6F646A81A1B941E002C2804 /* YSHAbMerchantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHAbMerchantModel.h; sourceTree = "<group>"; };
 		F6F646A91A1B941E002C2804 /* YSHAbMerchantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHAbMerchantModel.m; sourceTree = "<group>"; };
 		F6F646AB1A1B9C95002C2804 /* YSHMerchant_listModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHMerchant_listModel.h; sourceTree = "<group>"; };
@@ -670,6 +673,8 @@
 				F68332E01A471AE900DEC2D1 /* YSHTestTableHeadView.xib */,
 				F68332DD1A47110B00DEC2D1 /* YSHBodyTestViewController.h */,
 				F68332DE1A47110B00DEC2D1 /* YSHBodyTestViewController.m */,
+				F6AEB15D1A5AE7A000C7C19D /* YSHBodyTestResultViewController.h */,
+				F6AEB15E1A5AE7A000C7C19D /* YSHBodyTestResultViewController.m */,
 				F6FA77D21A49B51100989888 /* bodyTest.plist */,
 				F62C421C1A5835F2007A1B73 /* YSHTestInfoViewController.h */,
 				F62C421D1A5835F2007A1B73 /* YSHTestInfoViewController.m */,
@@ -1115,6 +1120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6AEB15F1A5AE7A000C7C19D /* YSHBodyTestResultViewController.m in Sources */,
 				F6054A0E1A4307F400A11D4C /* YSHTagCollectionViewCell.m in Sources */,
 				F604CC881A12503700B653BB /* YSHLoginInViewController.m in Sources */,
 				F62C42191A582F52007A1B73 /* YSHCategoryFilteView.m in Sources */,

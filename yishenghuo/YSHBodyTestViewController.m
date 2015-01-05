@@ -91,7 +91,7 @@ static NSString *const kTestCell = @"bodyTestCell";
     [confirmBtn setBackgroundImage:[publicFuncClass ImageWithColor:KMainColor] forState:UIControlStateNormal];
     confirmBtn.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
     confirmBtn.enabled = NO;
-    [confirmBtn addTarget:self action:@selector(confirmAction) forControlEvents:UIControlEventTouchDragInside];
+    [confirmBtn addTarget:self action:@selector(confirmAction) forControlEvents:UIControlEventTouchUpInside];
     
     [confirmBtn sizeToFit];
     
@@ -226,10 +226,10 @@ static NSString *const kTestCell = @"bodyTestCell";
                     }
 //                    [swself.testTableView reloadData];
                     if (indexPath.row < _questionArray.count -1) {
-                        [swself.testTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row+1 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+                        [swself.testTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row+1 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
                         
                         
-                         [swself.testTableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:indexPath.row+1 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+                        [swself.testTableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:indexPath.row+1 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];//UITableViewRowAnimationAutomatic];
                     }
                     else
                     {
@@ -311,10 +311,20 @@ static NSString *const kTestCell = @"bodyTestCell";
 #pragma mark 计算分数
 - (void)scoreResult
 {
-    /// 7 8 8 8 6 7 7 7 8 每种体质题目的数目
+    /// 7 8 8 8 6 7 7 7 8 每种体质题目的数目 一个9个
     /// 转化分数=[（原始分-条目数）/（条目数×4）] ×100
     
-    NSMutableArray *scoreArr = [@[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0] mutableCopy];
+    NSArray *questionNumArr = @[@7,@8,@8,@8,@6,@7,@7,@7,@8];
+    
+    NSArray *bodyType = @[@"阳虚质",@"阴虚质",@"气虚质",@"痰湿质",@"湿热质",@"血瘀质",@"特禀质",@"气郁质",@"平和质"];
+    
+    NSMutableArray *scoreArr = [[NSMutableArray alloc] init];
+    for (int j=0; j<9; j++) {
+       NSMutableArray *tmp = [@[@0,[NSNumber numberWithInt:j]] mutableCopy];
+        [scoreArr addObject:tmp];
+    }
+    
+    NSLog(@"?????");
     
     [_answerDic enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSNumber *obj, BOOL *stop) {
         int index = [key intValue];
@@ -364,17 +374,66 @@ static NSString *const kTestCell = @"bodyTestCell";
         }
         
         
-        int num = [scoreArr[arrIndex] intValue];
+        NSMutableArray *sco = scoreArr[arrIndex];
+        int num = [[scoreArr[arrIndex] objectAtIndex:0] intValue];
         num += [obj intValue];
-        scoreArr[arrIndex] = [NSNumber numberWithInt:num];
+        [sco setObject:[NSNumber numberWithInt:num] atIndexedSubscript:0];// = [NSNumber numberWithInt:num];
 
     }];
     
-    NSLog(@"%@",scoreArr);
     
-    NSArray *array2 = [scoreArr sortedArrayUsingSelector:@selector(compare:)];
+    NSLog(@"score=%@",scoreArr);
+
+//    NSArray *array2 = [scoreArr sortedArrayUsingSelector:@selector(compare:)];
+//    
+//    NSLog(@"array2:%@", array2);
     
-    NSLog(@"array2:%@", array2);
+    NSMutableArray *scoreTmpArr = [scoreArr mutableCopy];
+    
+    [scoreTmpArr enumerateObjectsUsingBlock:^(NSArray *obj, NSUInteger idx, BOOL *stop) {
+        
+        NSNumber *ori = obj[0];
+        
+        int result = (float)([ori intValue]-[questionNumArr[idx] intValue])/([questionNumArr[idx] intValue]*4) * 100;
+        
+        NSMutableArray *sco = scoreArr[idx];
+        [sco setObject:[NSNumber numberWithInt:result] atIndexedSubscript:0];
+    }];
+    
+
+    NSArray *array2 = [scoreArr sortedArrayUsingComparator:
+                       
+                       ^NSComparisonResult(NSArray *obj1, NSArray *obj2) {
+                           
+                           // 先按照姓排序
+                           
+                           NSComparisonResult result = [obj1[0] compare:obj2[0]];
+                           
+                           // 如果有相同的姓，就比较名字
+                           
+                           if (result == NSOrderedSame) {
+                               
+                               result = [obj1[1] compare:obj2[1]];
+                               
+                           }  
+                           
+                           
+                           
+                           return result;  
+                           
+                       }];  
+    
+    
+    
+    NSLog(@"array2:%@", array2);  /// 最大的在后面
+
+
+
+
 }
+
+
+
+
 
 @end

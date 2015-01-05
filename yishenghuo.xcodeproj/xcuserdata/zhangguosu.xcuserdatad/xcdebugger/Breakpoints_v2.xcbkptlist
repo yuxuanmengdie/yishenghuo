@@ -105,7 +105,7 @@
                   symbolName = "-[YSHMerchantViewController businessListWithUserModel:]"
                   moduleName = "yishenghuo"
                   urlString = "file:///Users/zhangguosu/Desktop/yishenghuo/yishenghuo/YSHMerchantViewController.m"
-                  timestampString = "442076126.646688"
+                  timestampString = "442160587.738643"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -119,7 +119,7 @@
                   symbolName = "__55-[YSHMerchantViewController businessListWithUserModel:]_block_invoke"
                   moduleName = "yishenghuo"
                   urlString = "file:///Users/zhangguosu/Desktop/yishenghuo/yishenghuo/YSHMerchantViewController.m"
-                  timestampString = "442076126.646851"
+                  timestampString = "442160587.738837"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -167,7 +167,7 @@
                   symbolName = "-[YSHMerchantViewController merchantDetailWithUserModel:]"
                   moduleName = "yishenghuo"
                   urlString = "file:///Users/zhangguosu/Desktop/yishenghuo/yishenghuo/YSHMerchantViewController.m"
-                  timestampString = "442076126.648398"
+                  timestampString = "442160587.740402"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "162"
@@ -181,7 +181,7 @@
                   symbolName = "__57-[YSHMerchantViewController merchantDetailWithUserModel:]_block_invoke"
                   moduleName = "yishenghuo"
                   urlString = "file:///Users/zhangguosu/Desktop/yishenghuo/yishenghuo/YSHMerchantViewController.m"
-                  timestampString = "442076126.648822"
+                  timestampString = "442160587.740533"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "162"
@@ -278,6 +278,54 @@
             startingLineNumber = "241"
             endingLineNumber = "241"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "yishenghuo/YSHBodyTestViewController.m"
+            timestampString = "442164033.694076"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "384"
+            endingLineNumber = "384"
+            landmarkName = "-scoreResult"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "yishenghuo/YSHBodyTestViewController.m"
+            timestampString = "442164033.694076"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
+            landmarkName = "-scoreResult"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "yishenghuo/YSHBodyTestViewController.m"
+            timestampString = "442161011.764445"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "-confirmAction"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
