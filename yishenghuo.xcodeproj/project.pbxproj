@@ -83,6 +83,10 @@
 		F683951B1A2377D6008D6001 /* YSHSamesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F683951A1A2377D6008D6001 /* YSHSamesModel.m */; };
 		F683951F1A237923008D6001 /* YSHBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F683951E1A237923008D6001 /* YSHBusinessViewController.m */; };
 		F6AEB15F1A5AE7A000C7C19D /* YSHBodyTestResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB15E1A5AE7A000C7C19D /* YSHBodyTestResultViewController.m */; };
+		F6D6B2C11A5D74F700FF1777 /* YSHBodyTestChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D6B2C01A5D74F700FF1777 /* YSHBodyTestChartView.m */; };
+		F6D6B2C31A5D752100FF1777 /* YSHBodyTestChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D6B2C21A5D752100FF1777 /* YSHBodyTestChartView.xib */; };
+		F6D6B2C61A5D892800FF1777 /* YSHTagLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D6B2C51A5D892800FF1777 /* YSHTagLabelView.m */; };
+		F6D6B2C81A5D895500FF1777 /* YSHTagLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D6B2C71A5D895500FF1777 /* YSHTagLabelView.xib */; };
 		F6F646AA1A1B941E002C2804 /* YSHAbMerchantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F646A91A1B941E002C2804 /* YSHAbMerchantModel.m */; };
 		F6F646AD1A1B9C95002C2804 /* YSHMerchant_listModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F646AC1A1B9C95002C2804 /* YSHMerchant_listModel.m */; };
 		F6F646B01A1BA11B002C2804 /* YSHYSHBodyDicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F646AF1A1BA11B002C2804 /* YSHYSHBodyDicModel.m */; };
@@ -298,6 +302,12 @@
 		F683951E1A237923008D6001 /* YSHBusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHBusinessViewController.m; sourceTree = "<group>"; };
 		F6AEB15D1A5AE7A000C7C19D /* YSHBodyTestResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHBodyTestResultViewController.h; sourceTree = "<group>"; };
 		F6AEB15E1A5AE7A000C7C19D /* YSHBodyTestResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHBodyTestResultViewController.m; sourceTree = "<group>"; };
+		F6D6B2BF1A5D74F700FF1777 /* YSHBodyTestChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHBodyTestChartView.h; sourceTree = "<group>"; };
+		F6D6B2C01A5D74F700FF1777 /* YSHBodyTestChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHBodyTestChartView.m; sourceTree = "<group>"; };
+		F6D6B2C21A5D752100FF1777 /* YSHBodyTestChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSHBodyTestChartView.xib; sourceTree = "<group>"; };
+		F6D6B2C41A5D892800FF1777 /* YSHTagLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHTagLabelView.h; sourceTree = "<group>"; };
+		F6D6B2C51A5D892800FF1777 /* YSHTagLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHTagLabelView.m; sourceTree = "<group>"; };
+		F6D6B2C71A5D895500FF1777 /* YSHTagLabelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSHTagLabelView.xib; sourceTree = "<group>"; };
 		F6F646A81A1B941E002C2804 /* YSHAbMerchantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHAbMerchantModel.h; sourceTree = "<group>"; };
 		F6F646A91A1B941E002C2804 /* YSHAbMerchantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHAbMerchantModel.m; sourceTree = "<group>"; };
 		F6F646AB1A1B9C95002C2804 /* YSHMerchant_listModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHMerchant_listModel.h; sourceTree = "<group>"; };
@@ -675,6 +685,7 @@
 				F68332DE1A47110B00DEC2D1 /* YSHBodyTestViewController.m */,
 				F6AEB15D1A5AE7A000C7C19D /* YSHBodyTestResultViewController.h */,
 				F6AEB15E1A5AE7A000C7C19D /* YSHBodyTestResultViewController.m */,
+				F6D6B2BE1A5D734500FF1777 /* testResultCustomView */,
 				F6FA77D21A49B51100989888 /* bodyTest.plist */,
 				F62C421C1A5835F2007A1B73 /* YSHTestInfoViewController.h */,
 				F62C421D1A5835F2007A1B73 /* YSHTestInfoViewController.m */,
@@ -696,6 +707,19 @@
 			children = (
 			);
 			name = customViews;
+			sourceTree = "<group>";
+		};
+		F6D6B2BE1A5D734500FF1777 /* testResultCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				F6D6B2BF1A5D74F700FF1777 /* YSHBodyTestChartView.h */,
+				F6D6B2C01A5D74F700FF1777 /* YSHBodyTestChartView.m */,
+				F6D6B2C21A5D752100FF1777 /* YSHBodyTestChartView.xib */,
+				F6D6B2C41A5D892800FF1777 /* YSHTagLabelView.h */,
+				F6D6B2C51A5D892800FF1777 /* YSHTagLabelView.m */,
+				F6D6B2C71A5D895500FF1777 /* YSHTagLabelView.xib */,
+			);
+			name = testResultCustomView;
 			sourceTree = "<group>";
 		};
 		F6F646B11A1BA25A002C2804 /* first */ = {
@@ -1093,6 +1117,7 @@
 				F6FB6C221A10D992007C4A4C /* Images.xcassets in Resources */,
 				F68332DC1A470D8700DEC2D1 /* YSHTestSectionHeadView.xib in Resources */,
 				F62573151A597A0F000B6EE0 /* IQKeyboardManager.bundle in Resources */,
+				F6D6B2C81A5D895500FF1777 /* YSHTagLabelView.xib in Resources */,
 				F68332E11A471AE900DEC2D1 /* YSHTestTableHeadView.xib in Resources */,
 				F68332C81A46988800DEC2D1 /* YSHTitleDetailView.xib in Resources */,
 				F6FB6C141A10D992007C4A4C /* InfoPlist.strings in Resources */,
@@ -1101,6 +1126,7 @@
 				F68332CD1A46AF8100DEC2D1 /* YSHActivityInfoView.xib in Resources */,
 				F62C421B1A582FE2007A1B73 /* YSHCategoryFilteView.xib in Resources */,
 				F6FB6C1D1A10D992007C4A4C /* Main.storyboard in Resources */,
+				F6D6B2C31A5D752100FF1777 /* YSHBodyTestChartView.xib in Resources */,
 				040723871A58D7F200054845 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1129,6 +1155,7 @@
 				F625730E1A597A0F000B6EE0 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				F68332CB1A469EF600DEC2D1 /* YSHActivityInfoView.m in Sources */,
 				F6FB6C7A1A10DEF8007C4A4C /* JSONModelArray.m in Sources */,
+				F6D6B2C61A5D892800FF1777 /* YSHTagLabelView.m in Sources */,
 				040723881A58D7F200054845 /* SVProgressHUD.m in Sources */,
 				040723861A58D7F200054845 /* MBProgressHUD.m in Sources */,
 				F6F646BB1A1BA614002C2804 /* YSHMerchantCell.m in Sources */,
@@ -1160,6 +1187,7 @@
 				F604CC8F1A12664D00B653BB /* YSHLoginVoModel.m in Sources */,
 				F6FB6C821A10DEF8007C4A4C /* JSONValueTransformer.m in Sources */,
 				F68332DF1A47110B00DEC2D1 /* YSHBodyTestViewController.m in Sources */,
+				F6D6B2C11A5D74F700FF1777 /* YSHBodyTestChartView.m in Sources */,
 				F6FB6CB51A11168E007C4A4C /* YSHSubModel.m in Sources */,
 				F625730C1A597A0F000B6EE0 /* IQUIWindow+Hierarchy.m in Sources */,
 				F6FA77CE1A49A50800989888 /* YSHBodyTestModel.m in Sources */,

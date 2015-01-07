@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YSHBodyTestChartView">
+            <connections>
+                <outlet property="topConstraint1" destination="K2h-gR-Za0" id="MST-js-PBa"/>
+                <outlet property="topConstraint2" destination="bFr-30-qbK" id="fNO-lc-luR"/>
+                <outlet property="topConstraint3" destination="pKh-ag-Rkf" id="2V9-Wc-kl0"/>
+                <outlet property="topConstraint4" destination="q4W-1C-3Tn" id="gtY-Kl-9Bd"/>
+                <outlet property="topConstraint5" destination="udh-bO-QnT" id="7pt-jH-lqG"/>
+                <outlet property="topConstraint6" destination="hq6-Ef-i9Z" id="bDq-Jn-s1x"/>
+                <outlet property="topConstraint7" destination="cZf-VR-CjL" id="eFa-q0-ZPB"/>
+                <outlet property="topConstraint8" destination="fam-LB-zA3" id="oo1-jQ-wVY"/>
+                <outlet property="typeView1" destination="nxO-RV-bIA" id="b4h-zE-N9m"/>
+                <outlet property="typeView2" destination="VxA-Sb-7kc" id="t2J-y3-2Ph"/>
+                <outlet property="typeView3" destination="Qum-wb-nur" id="o4c-eK-WZV"/>
+                <outlet property="typeView4" destination="93q-YN-f65" id="b1A-NU-8f7"/>
+                <outlet property="typeView5" destination="0hu-wj-gAL" id="dzi-xZ-6Th"/>
+                <outlet property="typeView6" destination="4aX-FV-TEK" id="o6S-ba-Umz"/>
+                <outlet property="typeView7" destination="pOQ-js-j7O" id="4mk-fD-YYp"/>
+                <outlet property="typeView8" destination="2kP-VP-lTV" id="19w-vf-ay6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="586" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qum-wb-nur">
+                    <rect key="frame" x="153" y="0.0" width="64" height="200"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hu-wj-gAL">
+                    <rect key="frame" x="297" y="0.0" width="64" height="200"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93q-YN-f65">
+                    <rect key="frame" x="225" y="0.0" width="64" height="200"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4aX-FV-TEK">
+                    <rect key="frame" x="369" y="0.0" width="65" height="200"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOQ-js-j7O">
+                    <rect key="frame" x="442" y="0.0" width="64" height="200"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kP-VP-lTV">
+                    <rect key="frame" x="514" y="0.0" width="64" height="200"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VxA-Sb-7kc">
+                    <rect key="frame" x="80" y="0.0" width="65" height="200"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxO-RV-bIA">
+                    <rect key="frame" x="8" y="0.0" width="64" height="200"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="leading" secondItem="0hu-wj-gAL" secondAttribute="trailing" constant="8" id="8A0-m7-FG9"/>
+                <constraint firstItem="VxA-Sb-7kc" firstAttribute="leading" secondItem="nxO-RV-bIA" secondAttribute="trailing" constant="8" id="Ank-ZC-JQr"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="bottom" secondItem="0hu-wj-gAL" secondAttribute="bottom" id="Cse-sv-yAq"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="bottom" secondItem="93q-YN-f65" secondAttribute="bottom" id="Ffj-TH-EnA"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="bottom" secondItem="nxO-RV-bIA" secondAttribute="bottom" id="Fy3-0o-NZ8"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="width" secondItem="93q-YN-f65" secondAttribute="width" id="GCm-7D-7E4"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="width" secondItem="Qum-wb-nur" secondAttribute="width" id="GrQ-sP-0CH"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="bottom" secondItem="Qum-wb-nur" secondAttribute="bottom" id="GwG-bV-Ba2"/>
+                <constraint firstItem="nxO-RV-bIA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="K2h-gR-Za0"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="bottom" secondItem="pOQ-js-j7O" secondAttribute="bottom" id="Qg2-q5-My8"/>
+                <constraint firstAttribute="trailing" secondItem="2kP-VP-lTV" secondAttribute="trailing" constant="8" id="RVK-jU-oeq"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="width" secondItem="VxA-Sb-7kc" secondAttribute="width" id="TVx-nz-VDS"/>
+                <constraint firstItem="pOQ-js-j7O" firstAttribute="leading" secondItem="4aX-FV-TEK" secondAttribute="trailing" constant="8" id="TjT-Ak-nKV"/>
+                <constraint firstItem="nxO-RV-bIA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="b6K-4I-6Um"/>
+                <constraint firstItem="VxA-Sb-7kc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bFr-30-qbK"/>
+                <constraint firstItem="pOQ-js-j7O" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cZf-VR-CjL"/>
+                <constraint firstItem="93q-YN-f65" firstAttribute="leading" secondItem="Qum-wb-nur" secondAttribute="trailing" constant="8" id="emn-3c-W8d"/>
+                <constraint firstItem="2kP-VP-lTV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fam-LB-zA3"/>
+                <constraint firstAttribute="bottom" secondItem="4aX-FV-TEK" secondAttribute="bottom" id="gu7-UZ-SSU"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hq6-Ef-i9Z"/>
+                <constraint firstItem="2kP-VP-lTV" firstAttribute="leading" secondItem="pOQ-js-j7O" secondAttribute="trailing" constant="8" id="kzs-lA-4IQ"/>
+                <constraint firstItem="0hu-wj-gAL" firstAttribute="leading" secondItem="93q-YN-f65" secondAttribute="trailing" constant="8" id="mLM-P0-vi7"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="width" secondItem="pOQ-js-j7O" secondAttribute="width" id="nZX-TK-MZu"/>
+                <constraint firstItem="Qum-wb-nur" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pKh-ag-Rkf"/>
+                <constraint firstItem="93q-YN-f65" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="q4W-1C-3Tn"/>
+                <constraint firstItem="Qum-wb-nur" firstAttribute="leading" secondItem="VxA-Sb-7kc" secondAttribute="trailing" constant="8" id="rf5-AE-mnU"/>
+                <constraint firstItem="0hu-wj-gAL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="udh-bO-QnT"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="bottom" secondItem="2kP-VP-lTV" secondAttribute="bottom" id="uu1-lT-ZfP"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="width" secondItem="0hu-wj-gAL" secondAttribute="width" id="vmG-An-kQP"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="width" secondItem="nxO-RV-bIA" secondAttribute="width" id="y9a-8C-G56"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="bottom" secondItem="VxA-Sb-7kc" secondAttribute="bottom" id="zem-cT-jSg"/>
+                <constraint firstItem="4aX-FV-TEK" firstAttribute="width" secondItem="2kP-VP-lTV" secondAttribute="width" id="zs6-EH-FOV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="457" y="98.5"/>
+        </view>
+    </objects>
+</document>

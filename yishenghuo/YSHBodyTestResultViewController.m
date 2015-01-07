@@ -16,6 +16,12 @@
     int maySureType;
     /// 倾向
     NSMutableArray *tendency;
+    
+    /// 体质 1为平和质 2为基本平和质， 3为其他
+    int type;
+    
+    ///保存要展示的体质数组
+    NSArray *_showArray;
 }
 
 @end
@@ -62,4 +68,81 @@
 }
 */
 
+
+- (void)testResult
+{
+    
+    NSMutableArray *tmp = [_resultSortArray mutableCopy];
+    
+    [_resultSortArray enumerateObjectsUsingBlock:^(NSArray *obj, NSUInteger idx, BOOL *stop) {
+        
+        if ([obj[1] intValue] == [_resultSortArray count]-1) {
+            [tmp removeObjectAtIndex:idx];
+            *stop = YES;
+        }
+        
+    }];
+    
+    NSNumber *num = [tmp lastObject][0];
+    
+    
+    NSMutableArray *showArr = [[NSMutableArray alloc] init];
+
+    if ([num intValue] < 30) { /// 平和质
+        type = 1;
+        
+    }
+    else if ([num intValue] < 40) /// 基本平和质
+    {
+        type = 2;
+        [showArr addObject:[tmp lastObject]];
+        for (NSInteger j=[tmp count]-2; j>=0; j--) {
+            
+            NSArray *arr = tmp[j];
+            int score = [arr[0] intValue];
+            
+            if (score >= 30) {
+                [showArr addObject:arr];
+            }
+        }
+    }
+    else
+    {
+        type = 3;
+        
+        [showArr addObject:[tmp lastObject]];
+        for (NSInteger j=[tmp count]-2; j>=0; j--) {
+            
+            NSArray *arr = tmp[j];
+            int score = [arr[0] intValue];
+            
+            if (score >= 30) {
+                [showArr addObject:arr];
+            }
+        }
+
+    }
+    _showArray = showArr;
+    
+}
+
+
+
+- (NSString *)resultShow
+{
+    if (type == 1) {
+        
+        NSLog(@"平和质");
+    }
+    else if (type == 2)
+    {
+        NSLog(@"基本平和质");
+    }
+    else
+    {
+        
+    }
+    
+    return nil;
+}
 @end
