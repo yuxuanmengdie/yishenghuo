@@ -48,6 +48,8 @@
     _tagView.layer.masksToBounds = YES;
     _tagView.backgroundColor = KMainColor;
     _tagView.layer.cornerRadius = _tagView.frame.size.width/2.0;
+    
+    _textLabel.preferredMaxLayoutWidth = _textLabel.frame.size.width;
 }
 
 @end

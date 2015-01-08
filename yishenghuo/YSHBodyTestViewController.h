@@ -14,4 +14,9 @@
 ///是否男性
 @property (assign, nonatomic) BOOL isMale;
 
+
+@property (strong, nonatomic) NSMutableArray *resultSortArray;
+
+@property (strong, nonatomic) NSMutableArray *resultOriArray;
+
 @end

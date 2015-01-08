@@ -67,6 +67,7 @@
 		F62C42191A582F52007A1B73 /* YSHCategoryFilteView.m in Sources */ = {isa = PBXBuildFile; fileRef = F62C42181A582F52007A1B73 /* YSHCategoryFilteView.m */; };
 		F62C421B1A582FE2007A1B73 /* YSHCategoryFilteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F62C421A1A582FE2007A1B73 /* YSHCategoryFilteView.xib */; };
 		F62C421E1A5835F2007A1B73 /* YSHTestInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F62C421D1A5835F2007A1B73 /* YSHTestInfoViewController.m */; };
+		F64C1DED1A5ED38C006F88AF /* bodyType.plist in Resources */ = {isa = PBXBuildFile; fileRef = F64C1DEC1A5ED38C006F88AF /* bodyType.plist */; };
 		F68332BD1A468DBD00DEC2D1 /* YSHActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68332BC1A468DBD00DEC2D1 /* YSHActivityDetailViewController.m */; };
 		F68332C01A468DE600DEC2D1 /* YSHActivityInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68332BF1A468DE600DEC2D1 /* YSHActivityInfoViewController.m */; };
 		F68332C31A468E2300DEC2D1 /* YSHActivityCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68332C21A468E2300DEC2D1 /* YSHActivityCategoryViewController.m */; };
@@ -274,6 +275,7 @@
 		F62C421A1A582FE2007A1B73 /* YSHCategoryFilteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YSHCategoryFilteView.xib; sourceTree = "<group>"; };
 		F62C421C1A5835F2007A1B73 /* YSHTestInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHTestInfoViewController.h; sourceTree = "<group>"; };
 		F62C421D1A5835F2007A1B73 /* YSHTestInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHTestInfoViewController.m; sourceTree = "<group>"; };
+		F64C1DEC1A5ED38C006F88AF /* bodyType.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bodyType.plist; sourceTree = "<group>"; };
 		F68332BB1A468DBD00DEC2D1 /* YSHActivityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHActivityDetailViewController.h; sourceTree = "<group>"; };
 		F68332BC1A468DBD00DEC2D1 /* YSHActivityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHActivityDetailViewController.m; sourceTree = "<group>"; };
 		F68332BE1A468DE600DEC2D1 /* YSHActivityInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHActivityInfoViewController.h; sourceTree = "<group>"; };
@@ -687,6 +689,7 @@
 				F6AEB15E1A5AE7A000C7C19D /* YSHBodyTestResultViewController.m */,
 				F6D6B2BE1A5D734500FF1777 /* testResultCustomView */,
 				F6FA77D21A49B51100989888 /* bodyTest.plist */,
+				F64C1DEC1A5ED38C006F88AF /* bodyType.plist */,
 				F62C421C1A5835F2007A1B73 /* YSHTestInfoViewController.h */,
 				F62C421D1A5835F2007A1B73 /* YSHTestInfoViewController.m */,
 			);
@@ -1115,6 +1118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6FB6C221A10D992007C4A4C /* Images.xcassets in Resources */,
+				F64C1DED1A5ED38C006F88AF /* bodyType.plist in Resources */,
 				F68332DC1A470D8700DEC2D1 /* YSHTestSectionHeadView.xib in Resources */,
 				F62573151A597A0F000B6EE0 /* IQKeyboardManager.bundle in Resources */,
 				F6D6B2C81A5D895500FF1777 /* YSHTagLabelView.xib in Resources */,

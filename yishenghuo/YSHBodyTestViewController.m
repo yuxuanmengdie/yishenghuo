@@ -11,6 +11,7 @@
 #import "YSHTestSectionHeadView.h"
 #import "YSHTestTableHeadView.h"
 #import "YSHBodyTestModel.h"
+#import "YSHBodyTestResultViewController.h"
 
 @interface YSHBodyTestViewController ()
 <UITableViewDelegate,
@@ -58,7 +59,7 @@ static NSString *const kTestCell = @"bodyTestCell";
     [self.testTableView setDelegate:self];
     [self.testTableView setDataSource:self];
     
-    UIView *hView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 100)];
+    UIView *hView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.testTableView.frame.size.width, 100)];
     
     headView = [[[NSBundle mainBundle] loadNibNamed:@"YSHTestTableHeadView" owner:nil options:nil] firstObject];
     
@@ -90,12 +91,19 @@ static NSString *const kTestCell = @"bodyTestCell";
     [confirmBtn setTitle:@"提交" forState:UIControlStateNormal];
     [confirmBtn setBackgroundImage:[publicFuncClass ImageWithColor:KMainColor] forState:UIControlStateNormal];
     confirmBtn.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
-    confirmBtn.enabled = NO;
+//    confirmBtn.enabled = NO;
     [confirmBtn addTarget:self action:@selector(confirmAction) forControlEvents:UIControlEventTouchUpInside];
     
     [confirmBtn sizeToFit];
     
     self.testTableView.tableFooterView = confirmBtn;
+    
+    for (int j=0; j<[_questionArray count]; j++) {
+        int num = arc4random()%5+1;
+        NSLog(@"num=%d",num);
+        
+         [_answerDic setObject:[NSNumber numberWithInt:num] forKey:[NSString stringWithFormat:@"%d",j]];
+    }
     
     
     
@@ -297,7 +305,7 @@ static NSString *const kTestCell = @"bodyTestCell";
     [_testCell.contentView layoutIfNeeded];
     
     CGFloat height = [_testCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-    NSLog(@"%f",height);
+//    NSLog(@"%f",height);
     return height+2;
 }
 
@@ -316,7 +324,7 @@ static NSString *const kTestCell = @"bodyTestCell";
     
     NSArray *questionNumArr = @[@7,@8,@8,@8,@6,@7,@7,@7,@8];
     
-    NSArray *bodyType = @[@"阳虚质",@"阴虚质",@"气虚质",@"痰湿质",@"湿热质",@"血瘀质",@"特禀质",@"气郁质",@"平和质"];
+//    NSArray *bodyType = @[@"阳虚质",@"阴虚质",@"气虚质",@"痰湿质",@"湿热质",@"血瘀质",@"特禀质",@"气郁质",@"平和质"];
     
     NSMutableArray *scoreArr = [[NSMutableArray alloc] init];
     for (int j=0; j<9; j++) {
@@ -324,7 +332,7 @@ static NSString *const kTestCell = @"bodyTestCell";
         [scoreArr addObject:tmp];
     }
     
-    NSLog(@"?????");
+    NSLog(@"%@dic",_answerDic);
     
     [_answerDic enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSNumber *obj, BOOL *stop) {
         int index = [key intValue];
@@ -426,14 +434,21 @@ static NSString *const kTestCell = @"bodyTestCell";
     
     
     NSLog(@"array2:%@", array2);  /// 最大的在后面
+    
+    _resultOriArray = scoreArr;
+    _resultSortArray = [array2 mutableCopy];
 
-
+    [self performSegueWithIdentifier:@"bodyTestResult" sender:self];
 
 
 }
 
-
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    YSHBodyTestResultViewController *result = [segue destinationViewController];
+    result.resultOriArray =  _resultOriArray;
+    result.resultSortArray = _resultSortArray;
+}
 
 
 @end

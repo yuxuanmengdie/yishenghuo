@@ -27,7 +27,7 @@
                         <constraint firstAttribute="width" secondItem="8p6-EM-r1P" secondAttribute="height" multiplier="1:1" id="OMJ-cA-GSC"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYF-xP-kKF">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="kYF-xP-kKF">
                     <rect key="frame" x="22" y="8" width="327" height="62"/>
                     <string key="text">Label画虚线需要用到函数CGContext.,,SetLineDash
 此函数需要四个参数：
