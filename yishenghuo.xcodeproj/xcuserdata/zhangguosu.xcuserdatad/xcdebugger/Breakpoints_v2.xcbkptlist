@@ -105,7 +105,7 @@
                   symbolName = "-[YSHMerchantViewController businessListWithUserModel:]"
                   moduleName = "yishenghuo"
                   urlString = "file:///Users/zhangguosu/Desktop/yishenghuo/yishenghuo/YSHMerchantViewController.m"
-                  timestampString = "442427256.103304"
+                  timestampString = "442769600.63745"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -119,7 +119,7 @@
                   symbolName = "__55-[YSHMerchantViewController businessListWithUserModel:]_block_invoke"
                   moduleName = "yishenghuo"
                   urlString = "file:///Users/zhangguosu/Desktop/yishenghuo/yishenghuo/YSHMerchantViewController.m"
-                  timestampString = "442427256.103458"
+                  timestampString = "442769600.637916"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -167,7 +167,7 @@
                   symbolName = "-[YSHMerchantViewController merchantDetailWithUserModel:]"
                   moduleName = "yishenghuo"
                   urlString = "file:///Users/zhangguosu/Desktop/yishenghuo/yishenghuo/YSHMerchantViewController.m"
-                  timestampString = "442427256.105022"
+                  timestampString = "442769600.643495"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "162"
@@ -181,7 +181,7 @@
                   symbolName = "__57-[YSHMerchantViewController merchantDetailWithUserModel:]_block_invoke"
                   moduleName = "yishenghuo"
                   urlString = "file:///Users/zhangguosu/Desktop/yishenghuo/yishenghuo/YSHMerchantViewController.m"
-                  timestampString = "442427256.105236"
+                  timestampString = "442769600.643964"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "162"
@@ -336,11 +336,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "yishenghuo/YSHBodyTestResultViewController.m"
-            timestampString = "442427466.818781"
+            timestampString = "442771815.911101"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -358,6 +358,70 @@
             startingLineNumber = "127"
             endingLineNumber = "127"
             landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "yishenghuo/YSHBodyTestResultViewController.m"
+            timestampString = "442771815.911101"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
+            landmarkName = "-resultShow"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "yishenghuo/YSHBodyTestResultViewController.m"
+            timestampString = "442771815.911101"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
+            landmarkName = "-resultShow"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "yishenghuo/YSHBodyTestResultViewController.m"
+            timestampString = "442771815.911101"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "311"
+            endingLineNumber = "311"
+            landmarkName = "-resultShow"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "yishenghuo/YSHBodyTestResultViewController.m"
+            timestampString = "442771815.911101"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "307"
+            endingLineNumber = "307"
+            landmarkName = "-resultShow"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

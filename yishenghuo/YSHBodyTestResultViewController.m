@@ -149,10 +149,7 @@
     
     [self.backView updateConstraintsIfNeeded];
     [self.backView layoutIfNeeded];
-    float backViewHei = [self.backView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-
-    NSLayoutConstraint *backCon = [NSLayoutConstraint constraintWithItem:self.backView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:backViewHei];
-    [self.backView addConstraint:backCon];
+    
     
     
 }
@@ -171,6 +168,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    _moreTypeLabel.preferredMaxLayoutWidth = CGRectGetWidth(_moreTypeLabel.frame);
+    
+    [self.backView updateConstraintsIfNeeded];
+    [self.backView layoutIfNeeded];
+    float backViewHei = [self.backView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    
+    NSLayoutConstraint *backCon = [NSLayoutConstraint constraintWithItem:self.backView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:backViewHei];
+    [self.backView addConstraint:backCon];
+}
 
 #pragma mark
 //- (void)chartView
@@ -308,11 +318,13 @@
                 if (first) {
                     first = NO;
                     if (isfirst) {
-                        result = @"倾向";
+                        result = [result stringByAppendingString:@"倾向"];//[ NSString stringWithFormat:@"%@。",_bodyTypeArray[idx] ]];
                     }
                     else
                     {
-                    result = @"。\n\n倾向";
+//                    result = @"。\n\n倾向";
+                        result = [result substringToIndex:result.length-1];
+                        result = [result stringByAppendingString:[ NSString stringWithFormat:@"。\n\n倾向"]];
                     }
                 }
                 if (j < [_showArray count]-1) {
