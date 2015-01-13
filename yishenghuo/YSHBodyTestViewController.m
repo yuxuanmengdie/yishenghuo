@@ -91,19 +91,31 @@ static NSString *const kTestCell = @"bodyTestCell";
     [confirmBtn setTitle:@"提交" forState:UIControlStateNormal];
     [confirmBtn setBackgroundImage:[publicFuncClass ImageWithColor:KMainColor] forState:UIControlStateNormal];
     confirmBtn.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
-//    confirmBtn.enabled = NO;
+    confirmBtn.enabled = NO;
     [confirmBtn addTarget:self action:@selector(confirmAction) forControlEvents:UIControlEventTouchUpInside];
     
     [confirmBtn sizeToFit];
     
     self.testTableView.tableFooterView = confirmBtn;
     
-    for (int j=0; j<[_questionArray count]; j++) {
-        int num = arc4random()%5+1;
-        NSLog(@"num=%d",num);
+    if ([self.testTableView respondsToSelector:@selector(setSeparatorInset:)]) {
         
-         [_answerDic setObject:[NSNumber numberWithInt:num] forKey:[NSString stringWithFormat:@"%d",j]];
+        [self.testTableView setSeparatorInset:UIEdgeInsetsZero];
+        
     }
+    
+    if ([self.testTableView respondsToSelector:@selector(setLayoutMargins:)]) {
+        
+        [self.testTableView setLayoutMargins:UIEdgeInsetsZero];
+        
+    }
+    
+//    for (int j=0; j<[_questionArray count]; j++) {
+//        int num = arc4random()%5+1;
+//        NSLog(@"num=%d",num);
+//        
+//         [_answerDic setObject:[NSNumber numberWithInt:num] forKey:[NSString stringWithFormat:@"%d",j]];
+//    }
     
     
     
@@ -186,6 +198,7 @@ static NSString *const kTestCell = @"bodyTestCell";
     cell.selectSegmentControl.hidden = YES;
     cell.questionLabel.preferredMaxLayoutWidth = self.testTableView.frame.size.width-16;
     cell.contentView.backgroundColor = [UIColor whiteColor];
+    cell.separatorInset = UIEdgeInsetsZero;
     if (indexPath.row < _currentQuestion) {
         cell.selectSegmentControl.hidden = NO;
 
@@ -234,15 +247,18 @@ static NSString *const kTestCell = @"bodyTestCell";
                     }
 //                    [swself.testTableView reloadData];
                     if (indexPath.row < _questionArray.count -1) {
+                        
+//                        [swself.testTableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:indexPath.row+1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
                         [swself.testTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row+1 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
                         
                         
-                        [swself.testTableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:indexPath.row+1 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];//UITableViewRowAnimationAutomatic];
+                        //UITableViewRowAnimationAutomatic];
                     }
                     else
                     {
                         swself->confirmBtn.enabled = YES;
                     }
+                    [swself.testTableView reloadData];
                    
                 }
                 else
@@ -307,6 +323,24 @@ static NSString *const kTestCell = @"bodyTestCell";
     CGFloat height = [_testCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
 //    NSLog(@"%f",height);
     return height+2;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+
+{
+    
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+        
+    }
+    
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+        
+    }
+    
 }
 
 #pragma mark 根据 indexPath 返回
@@ -444,8 +478,8 @@ static NSString *const kTestCell = @"bodyTestCell";
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    YSHBodyTestResultViewController *result = [segue destinationViewController];
+    UINavigationController *nav = [segue destinationViewController];
+    YSHBodyTestResultViewController *result = (YSHBodyTestResultViewController *)[nav visibleViewController];
     result.resultOriArray =  _resultOriArray;
     result.resultSortArray = _resultSortArray;
 }

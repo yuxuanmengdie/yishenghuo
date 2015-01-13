@@ -75,6 +75,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    [[UINavigationBar appearance] setBarTintColor:KMainColor];
+    self.title = @"你大爷";
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:@"返回" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(returnBack) forControlEvents:UIControlEventTouchUpInside];
+    [btn sizeToFit];
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    self.navigationItem.leftBarButtonItem = left;
+    
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
     NSArray *bodyType = @[@"阳虚质",@"阴虚质",@"气虚质",@"痰湿质",@"湿热质",@"血瘀质",@"特禀质",@"气郁质",@"平和质"];
     _bodyTypeArray = bodyType;
     [self testResult];
@@ -93,6 +104,7 @@
 
     }
     _titleTypeLabel.text = _bodyType;
+    _titleTypeLabel.textColor = KMainColor;
     
     _detail1.translatesAutoresizingMaskIntoConstraints = NO;
     _detail2.translatesAutoresizingMaskIntoConstraints = NO;
@@ -151,6 +163,46 @@
     [self.backView layoutIfNeeded];
     
     
+    _chartView.translatesAutoresizingMaskIntoConstraints = NO;
+    [_chartView layoutIfNeeded];
+    CGSize chartSize = [_chartView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    
+    NSArray *cons  = @[_chartView.topConstraint1,_chartView.topConstraint2,_chartView.topConstraint3,_chartView.topConstraint4,_chartView.topConstraint5,_chartView.topConstraint6,_chartView.topConstraint7,_chartView.topConstraint8];
+    
+    NSArray *viewArr = @[_chartView.typeView1,_chartView.typeView2,_chartView.typeView3,_chartView.typeView4,_chartView.typeView5,_chartView.typeView6,_chartView.typeView7,_chartView.typeView8];
+    
+    
+    NSNumber *num = [_resultSortArray lastObject][0];
+    int hight = [num intValue];
+    _chartView.hightScore = hight;
+    for (int j=0; j<_resultOriArray.count-1; j++) {
+        if (j<cons.count) {
+            
+            NSNumber *idxNUm = _resultOriArray[j][0];
+            int score = [idxNUm intValue];
+            
+            NSLayoutConstraint *con  = cons[j];
+            if (hight == 0) {
+                con.constant = 0;
+            }
+            else
+            {
+                con.constant = (1-(float)score/hight)*chartSize.height;
+            }
+             UIView *typeView = viewArr[j];
+            typeView.backgroundColor = KMainColor;
+            
+            if (j==idx) {
+               
+                typeView.backgroundColor = [UIColor orangeColor];
+            }
+
+        }
+    }
+    [_chartView setNeedsDisplay];
+    [_chartView layoutIfNeeded];
+    
+    
     
 }
 
@@ -168,6 +220,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+- (void)returnBack
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {

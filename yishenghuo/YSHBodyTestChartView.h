@@ -29,4 +29,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint7;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint8;
 
+@property (assign, nonatomic) float hightScore;
+
 @end

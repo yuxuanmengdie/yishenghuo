@@ -15,14 +15,21 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
+    if (_hightScore == 0) {
+        return;
+    }
+    
+    CGRect viewRect = _typeView1.frame;
+    CGFloat hei = CGRectGetMaxY(_typeView1.frame);
+    
     CGContextRef context =UIGraphicsGetCurrentContext();
     CGContextBeginPath(context);
     CGContextSetLineWidth(context, 0.5);
-    CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, KMainColor.CGColor);
     CGFloat lengths[] = {3,3};
     CGContextSetLineDash(context, 0, lengths,2);
-    CGContextMoveToPoint(context, 0,rect.size.height*0.3);
-    CGContextAddLineToPoint(context, rect.size.width,rect.size.height*0.3);
+    CGContextMoveToPoint(context, 0,hei*(1-30.0/_hightScore));
+    CGContextAddLineToPoint(context, rect.size.width,hei*(1-30.0/_hightScore));
     CGContextStrokePath(context);
 //    CGContextClosePath(context);
 
@@ -31,11 +38,11 @@
     CGContextBeginPath(context1);
     CGContextSetLineWidth(context1, 0.5);
 
-    CGContextSetStrokeColorWithColor(context1, [UIColor redColor].CGColor);
+    CGContextSetStrokeColorWithColor(context1, [UIColor orangeColor].CGColor);
     
     CGContextSetLineDash(context1, 0, lengths,2);
-    CGContextMoveToPoint(context1, 0,rect.size.height*0.4);
-    CGContextAddLineToPoint(context1, rect.size.width,rect.size.height*0.4);
+    CGContextMoveToPoint(context1, 0,hei*(1-40.0/_hightScore));
+    CGContextAddLineToPoint(context1, rect.size.width,hei*(1-40.0/_hightScore));
     CGContextStrokePath(context1);
 //    CGContextClosePath(context1);
     
