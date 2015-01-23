@@ -68,6 +68,7 @@
 		F62C421B1A582FE2007A1B73 /* YSHCategoryFilteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F62C421A1A582FE2007A1B73 /* YSHCategoryFilteView.xib */; };
 		F62C421E1A5835F2007A1B73 /* YSHTestInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F62C421D1A5835F2007A1B73 /* YSHTestInfoViewController.m */; };
 		F64C1DED1A5ED38C006F88AF /* bodyType.plist in Resources */ = {isa = PBXBuildFile; fileRef = F64C1DEC1A5ED38C006F88AF /* bodyType.plist */; };
+		F65CBBFF1A6802D30027E8A6 /* activyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65CBBFE1A6802D30027E8A6 /* activyView.xib */; };
 		F68332BD1A468DBD00DEC2D1 /* YSHActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68332BC1A468DBD00DEC2D1 /* YSHActivityDetailViewController.m */; };
 		F68332C01A468DE600DEC2D1 /* YSHActivityInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68332BF1A468DE600DEC2D1 /* YSHActivityInfoViewController.m */; };
 		F68332C31A468E2300DEC2D1 /* YSHActivityCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68332C21A468E2300DEC2D1 /* YSHActivityCategoryViewController.m */; };
@@ -276,6 +277,7 @@
 		F62C421C1A5835F2007A1B73 /* YSHTestInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHTestInfoViewController.h; sourceTree = "<group>"; };
 		F62C421D1A5835F2007A1B73 /* YSHTestInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHTestInfoViewController.m; sourceTree = "<group>"; };
 		F64C1DEC1A5ED38C006F88AF /* bodyType.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bodyType.plist; sourceTree = "<group>"; };
+		F65CBBFE1A6802D30027E8A6 /* activyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = activyView.xib; sourceTree = "<group>"; };
 		F68332BB1A468DBD00DEC2D1 /* YSHActivityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHActivityDetailViewController.h; sourceTree = "<group>"; };
 		F68332BC1A468DBD00DEC2D1 /* YSHActivityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHActivityDetailViewController.m; sourceTree = "<group>"; };
 		F68332BE1A468DE600DEC2D1 /* YSHActivityInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHActivityInfoViewController.h; sourceTree = "<group>"; };
@@ -667,6 +669,7 @@
 				F68332C91A469EF600DEC2D1 /* YSHActivityInfoView.h */,
 				F68332CA1A469EF600DEC2D1 /* YSHActivityInfoView.m */,
 				F68332CC1A46AF8100DEC2D1 /* YSHActivityInfoView.xib */,
+				F65CBBFE1A6802D30027E8A6 /* activyView.xib */,
 				F68332CE1A46F25C00DEC2D1 /* bodyTesr */,
 			);
 			name = activitySub;
@@ -1127,6 +1130,7 @@
 				F6FB6C141A10D992007C4A4C /* InfoPlist.strings in Resources */,
 				F60BC4321A4079950076D8A2 /* YSHActivityTableCell.xib in Resources */,
 				F6FA77D31A49B51100989888 /* bodyTest.plist in Resources */,
+				F65CBBFF1A6802D30027E8A6 /* activyView.xib in Resources */,
 				F68332CD1A46AF8100DEC2D1 /* YSHActivityInfoView.xib in Resources */,
 				F62C421B1A582FE2007A1B73 /* YSHCategoryFilteView.xib in Resources */,
 				F6FB6C1D1A10D992007C4A4C /* Main.storyboard in Resources */,
@@ -1388,6 +1392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "yishenghuo/yishenghuo-Prefix.pch";
 				INFOPLIST_FILE = "yishenghuo/yishenghuo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -1402,6 +1407,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "yishenghuo/yishenghuo-Prefix.pch";
 				INFOPLIST_FILE = "yishenghuo/yishenghuo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

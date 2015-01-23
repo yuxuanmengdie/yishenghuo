@@ -41,26 +41,27 @@
 }
 
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    if ([super initWithCoder:aDecoder]) {
-        
-        UITableViewCell *subView = [[[NSBundle mainBundle] loadNibNamed:@"YSHActivityTableCell" owner:self options:nil] firstObject];
+//- (id)initWithCoder:(NSCoder *)aDecoder
+//{
+//    if ([super initWithCoder:aDecoder]) {
+//        
+//        UITableViewCell *subView = [[[NSBundle mainBundle] loadNibNamed:@"YSHActivityTableCell" owner:self options:nil] firstObject];
 //        [self.contentView addSubview:subView.contentView];
-        
-        [self addSubview:subView.contentView];
-        
+//        
+////        [self。co addSubview:subView.contentView];
+//        
 //        self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
-//        
-//        NSLayoutConstraint *con1 = [NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0];
-//        NSLayoutConstraint *con2 = [NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0];
-//        NSLayoutConstraint *con3 = [NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTop multiplier:1.0 constant:0];
-//        NSLayoutConstraint *con4 = [NSLayoutConstraint constraintWithItem:subView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
+//        subView.contentView.translatesAutoresizingMaskIntoConstraints = NO;
+////        
+//        NSLayoutConstraint *con1 = [NSLayoutConstraint constraintWithItem:subView.contentView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0];
+//        NSLayoutConstraint *con2 = [NSLayoutConstraint constraintWithItem:subView.contentView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0];
+//        NSLayoutConstraint *con3 = [NSLayoutConstraint constraintWithItem:subView.contentView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeTop multiplier:1.0 constant:0];
+//        NSLayoutConstraint *con4 = [NSLayoutConstraint constraintWithItem:subView.contentView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
 //        [self.contentView addConstraints:@[con1,con2,con3,con4]];
-//        
-    }
-    return self;
-}
+////
+//    }
+//    return self;
+//}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

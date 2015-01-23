@@ -18,7 +18,9 @@ UICollectionViewDelegate,
 UIActionSheetDelegate,
 UIImagePickerControllerDelegate,
 UINavigationControllerDelegate,
-UICollectionViewDelegateFlowLayout
+UICollectionViewDelegateFlowLayout,
+UITableViewDataSource,
+UITableViewDelegate
 >
 
 {
@@ -89,6 +91,13 @@ UICollectionViewDelegateFlowLayout
 @property (weak, nonatomic) IBOutlet YSHActivityTableCell *tableViewCell4;
 @property (weak, nonatomic) IBOutlet YSHActivityTableCell *tableViewCell5;
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView1;
+@property (weak, nonatomic) IBOutlet UITableView *tableView2;
+@property (weak, nonatomic) IBOutlet UITableView *tableView3;
+@property (weak, nonatomic) IBOutlet UITableView *tableView4;
+@property (weak, nonatomic) IBOutlet UITableView *tableView5;
+
+
 @property (weak, nonatomic) IBOutlet UICollectionView *tagCollectionView;
 
 /// photo的 collectionView的高度
@@ -121,6 +130,8 @@ static  NSString *const kDateVCIdentifier = @"dateIdentifier";
 static NSString *const kActivityInfo = @"activityInfo";
 
 static NSString *const kActivityDetail = @"activityDetail";
+
+static NSString *const kActivityTableCellIdentifier = @"activityTableCellIdentifier";
 
 
 
@@ -209,6 +220,13 @@ static NSString *const kActivityDetail = @"activityDetail";
     
     __weak typeof(self) wself = self;
     
+    
+    self.tableViewCell1.translatesAutoresizingMaskIntoConstraints = NO;
+     self.tableViewCell2.translatesAutoresizingMaskIntoConstraints = NO;
+     self.tableViewCell3.translatesAutoresizingMaskIntoConstraints = NO;
+     self.tableViewCell4.translatesAutoresizingMaskIntoConstraints = NO;
+     self.tableViewCell5.translatesAutoresizingMaskIntoConstraints = NO;
+    
     self.tableViewCell1.mainTitleLabel.text = @"活动地址";
     self.tableViewCell1.subHead.text = @"(必填)";
     self.tableViewCell1.rightLabel.text = @"福州市";
@@ -255,6 +273,29 @@ static NSString *const kActivityDetail = @"activityDetail";
     self.tableViewCell5.mySwitch.hidden = NO;
     self.tableViewCell5.accessoryType = UITableViewCellAccessoryNone;
 
+    
+    [_tableView1 registerNib:[UINib nibWithNibName:NSStringFromClass([YSHActivityTableCell class]) bundle:nil] forCellReuseIdentifier:kActivityTableCellIdentifier];
+    [_tableView2 registerNib:[UINib nibWithNibName:NSStringFromClass([YSHActivityTableCell class]) bundle:nil] forCellReuseIdentifier:kActivityTableCellIdentifier];
+
+    [_tableView3 registerNib:[UINib nibWithNibName:NSStringFromClass([YSHActivityTableCell class]) bundle:nil] forCellReuseIdentifier:kActivityTableCellIdentifier];
+
+    [_tableView4 registerNib:[UINib nibWithNibName:NSStringFromClass([YSHActivityTableCell class]) bundle:nil] forCellReuseIdentifier:kActivityTableCellIdentifier];
+
+    [_tableView5 registerNib:[UINib nibWithNibName:NSStringFromClass([YSHActivityTableCell class]) bundle:nil] forCellReuseIdentifier:kActivityTableCellIdentifier];
+
+    
+    
+    
+    _tableView1.delegate = self;
+    _tableView1.dataSource = self;
+    _tableView2.delegate = self;
+    _tableView2.dataSource = self;
+    _tableView3.delegate = self;
+    _tableView3.dataSource = self;
+    _tableView4.delegate = self;
+    _tableView4.dataSource = self;
+    _tableView5.delegate = self;
+    _tableView5.dataSource = self;
     
 
     
@@ -314,26 +355,34 @@ static NSString *const kActivityDetail = @"activityDetail";
         _datePickerVC.view.backgroundColor = [UIColor whiteColor];
 //        [_datePickerVC.datePicker setLocale:[NSLocale currentLocale]];
         _datePickerVC.view.layer.masksToBounds = YES;
-        _datePickerVC.view.layer.cornerRadius = 20;
+        _datePickerVC.view.layer.cornerRadius = 10;
         [self.view addSubview:_datePickerVC.view];
-        
+        _datePickerVC.view.bounds = self.view.bounds;
         
         _datePickerVC.view.translatesAutoresizingMaskIntoConstraints = NO;
         [_datePickerVC.view updateConstraintsIfNeeded];
         [_datePickerVC.view layoutIfNeeded];
-        CGSize dateSize = [_datePickerVC.view systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+       
+        
+        
         NSLayoutConstraint *con1 = [NSLayoutConstraint constraintWithItem:_datePickerVC.view attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
         
         NSLayoutConstraint *con2 = [NSLayoutConstraint constraintWithItem:_datePickerVC.view attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
         
-         NSLayoutConstraint *con3 = [NSLayoutConstraint constraintWithItem:_datePickerVC.view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:dateSize.height];
+        
         
         NSLayoutConstraint *con4 = [NSLayoutConstraint constraintWithItem:_datePickerVC.view attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:280];
-        
-        [self.view addConstraints:@[con1,con2,con3,con4]];
+        [self.view addConstraints:@[con1,con2,con4]];
         [self.view updateConstraintsIfNeeded];
         [self.view layoutIfNeeded];
-    }
+
+        
+         CGSize dateSize = [_datePickerVC.view systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+        NSLog(@"size=%@",NSStringFromCGSize(dateSize));
+        NSLayoutConstraint *con3 = [NSLayoutConstraint constraintWithItem:_datePickerVC.view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:dateSize.height];
+        
+        [self.view addConstraint:con3];
+        }
     
     _datePickerVC.view.hidden = NO;
     _dateBackView.hidden = NO;
@@ -605,4 +654,91 @@ static NSString *const kActivityDetail = @"activityDetail";
     return newImage;
 }
 
+
+#pragma mark dataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YSHActivityTableCell *cell = [tableView dequeueReusableCellWithIdentifier:kActivityTableCellIdentifier forIndexPath:indexPath];
+    if ([tableView isEqual:_tableView1]) {
+        
+        cell.mainTitleLabel.text = @"活动地址";
+        cell.subHead.text = @"(必填)";
+        cell.rightLabel.text = @"福州市";
+        cell.mySwitch.hidden = YES;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
+    }
+    else if ([tableView isEqual:_tableView2])
+    {
+        
+        cell.mainTitleLabel.text = @"活动详情";
+        cell.subHead.text = nil;
+        cell.rightLabel.text = nil;
+        cell.mySwitch.hidden = YES;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    else if ([tableView isEqual:_tableView3])
+    {
+        cell.mainTitleLabel.text = @"费用、人数、联系方式";
+        cell.subHead.text = nil;
+        cell.rightLabel.text = nil;
+        cell.mySwitch.hidden = YES;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    else if ([tableView isEqual:_tableView4])
+    {
+        cell.mainTitleLabel.text = @"活动类别";
+        cell.subHead.text = @"(添加类别标签系统会帮你找人！）";
+        cell.rightLabel.text = nil;
+        cell.mySwitch.hidden = YES;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    else if ([tableView isEqual:_tableView5])
+    {
+        cell.mainTitleLabel.text = @"系统帮忙找人";
+        cell.subHead.text = nil;
+        cell.rightLabel.text = nil;
+        cell.mySwitch.hidden = NO;
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.rightBtnTrailConstraint.constant -= cell.mySwitch.intrinsicContentSize.width;
+    }
+
+
+    return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([tableView isEqual:_tableView1]) {
+        
+    }
+    else if ([tableView isEqual:_tableView2])
+    {
+        
+    }
+    else if ([tableView isEqual:_tableView3])
+    {
+        
+    }
+    else if ([tableView isEqual:_tableView4])
+    {
+        
+    }
+    else if ([tableView isEqual:_tableView5])
+    {
+        
+    }
+
+}
 @end
