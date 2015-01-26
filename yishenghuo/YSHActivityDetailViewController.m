@@ -51,6 +51,7 @@
 //    _detailView1.textViewHeightConstraint.constant = 200;
     [_detailView1 updateConstraintsIfNeeded];
     [_detailView1 layoutIfNeeded];
+    /*
     CGSize size1 = [_detailView1 systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     NSLayoutConstraint *hei1 = [NSLayoutConstraint constraintWithItem:_detailView1 attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:size1.height];
     [_detailView1 addConstraint:hei1];
@@ -64,26 +65,26 @@
     NSLayoutConstraint *hei2 = [NSLayoutConstraint constraintWithItem:_detailView2 attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:size2.height];
     [_detailView2 addConstraint:hei2];
     NSLog(@"2hei=%f",size2.height);
-
-    _detailView1.backgroundColor = [UIColor redColor];
-    _detailView2.backgroundColor = [UIColor blueColor];
+*/
+    _detailView1.backgroundColor = [UIColor whiteColor];
+    _detailView2.backgroundColor = [UIColor whiteColor];
     self.backScrollView.backgroundColor = [UIColor lightGrayColor];
-    self.containView.backgroundColor = [UIColor lightGrayColor];
+    self.containView.backgroundColor = [UIColor redColor];
     
     
     
    
     
     NSLayoutConstraint *con1 = [NSLayoutConstraint constraintWithItem:_containView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0];
-    [_containView updateConstraintsIfNeeded];
-    [_containView layoutIfNeeded];
+//    [_containView updateConstraintsIfNeeded];
+//    [_containView layoutIfNeeded];
+//    
+//    CGSize size = [_containView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//    
+//    NSLayoutConstraint *con2 = [NSLayoutConstraint constraintWithItem:_containView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:size.height];
+//    NSLog(@"contain=%f",size.height);
     
-    CGSize size = [_containView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    
-    NSLayoutConstraint *con2 = [NSLayoutConstraint constraintWithItem:_containView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:size.height];
-    NSLog(@"contain=%f",size.height);
-    
-    [self.view addConstraints:@[con1,con2]];
+    [self.view addConstraints:@[con1]];
     [self.view updateConstraintsIfNeeded];
     [self.view layoutIfNeeded];
 

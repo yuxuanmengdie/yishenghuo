@@ -38,6 +38,14 @@ static const float kTextViewDefaultHeight  = 50;
         UIView *subView =  [[[NSBundle mainBundle] loadNibNamed:@"YSHTitleDetailView" owner:self options:nil] firstObject];
         
         [self addSubview:subView];
+        subView.translatesAutoresizingMaskIntoConstraints = NO;
+        NSString *vfl1 = @"H:|-0-[subView]-0-|";
+        NSString *vfl2 = @"V:|-0-[subView]-0-|";
+        NSDictionary *dic = NSDictionaryOfVariableBindings(self,subView);
+        NSArray *arr1 = [NSLayoutConstraint constraintsWithVisualFormat:vfl1 options:0 metrics:nil views:dic];
+        NSArray *arr2 = [NSLayoutConstraint constraintsWithVisualFormat:vfl2 options:0 metrics:nil views:dic];
+        [self addConstraints:arr1];
+        [self addConstraints:arr2];
     }
     return self;
 }

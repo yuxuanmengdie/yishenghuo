@@ -155,6 +155,8 @@ static NSString *const kActivityTableCellIdentifier = @"activityTableCellIdentif
         [self setEdgesForExtendedLayout:UIRectEdgeNone];
     }
     
+   
+    
     _photoCollectionView.dataSource = self;
     _photoCollectionView.delegate = self;
     _tagCollectionView.delegate = self;
@@ -676,6 +678,8 @@ static NSString *const kActivityTableCellIdentifier = @"activityTableCellIdentif
         cell.rightLabel.text = @"福州市";
         cell.mySwitch.hidden = YES;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.rightBtnTrailConstraint.constant -= cell.mySwitch.intrinsicContentSize.width + 16;
+        
 
     }
     else if ([tableView isEqual:_tableView2])
@@ -725,11 +729,11 @@ static NSString *const kActivityTableCellIdentifier = @"activityTableCellIdentif
     }
     else if ([tableView isEqual:_tableView2])
     {
-        
+         [self performSegueWithIdentifier:kActivityDetail sender:self];
     }
     else if ([tableView isEqual:_tableView3])
     {
-        
+        [self performSegueWithIdentifier:kActivityInfo sender:self];
     }
     else if ([tableView isEqual:_tableView4])
     {

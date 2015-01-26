@@ -22,8 +22,8 @@
 
 - (void)awakeFromNib
 {
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
-    [self addGestureRecognizer:tap];
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+//    [self addGestureRecognizer:tap];
     
     oriConstant = _rightBtnTrailConstraint.constant;
 }
@@ -66,11 +66,11 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-    NSLog(@"selected!!!");
-
-    if (selected) {
-        self.selected = NO;
-    }
+//    NSLog(@"selected!!!");
+//
+//    if (selected) {
+//        self.selected = NO;
+//    }
     
     // Configure the view for the selected state
 }
