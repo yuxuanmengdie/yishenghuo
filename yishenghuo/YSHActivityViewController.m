@@ -724,6 +724,7 @@ static NSString *const kActivityTableCellIdentifier = @"activityTableCellIdentif
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([tableView isEqual:_tableView1]) {
         
     }

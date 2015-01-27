@@ -69,24 +69,36 @@
     _detailView1.backgroundColor = [UIColor whiteColor];
     _detailView2.backgroundColor = [UIColor whiteColor];
     self.backScrollView.backgroundColor = [UIColor lightGrayColor];
-    self.containView.backgroundColor = [UIColor redColor];
+    self.containView.backgroundColor = [UIColor lightGrayColor];
     
     
     
-   
     
-    NSLayoutConstraint *con1 = [NSLayoutConstraint constraintWithItem:_containView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0];
 //    [_containView updateConstraintsIfNeeded];
 //    [_containView layoutIfNeeded];
-//    
+//    CGSize sizew = [_containView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//     NSLog(@"contain=%f",sizew.height);
+    NSLayoutConstraint *con1 = [NSLayoutConstraint constraintWithItem:_containView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0];
+    [self.view addConstraints:@[con1]];
+    
+    
+    NSLayoutConstraint *detailCon1 = [NSLayoutConstraint constraintWithItem:_detailView1 attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:120];
+     NSLayoutConstraint *detailCon2 = [NSLayoutConstraint constraintWithItem:_detailView2 attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:120];
+    [_detailView1 addConstraint:detailCon1];
+    [_detailView2 addConstraint:detailCon2];
+    
+//    [_containView updateConstraintsIfNeeded];
+//    [_containView layoutIfNeeded];
+    
+    
 //    CGSize size = [_containView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
 //    
 //    NSLayoutConstraint *con2 = [NSLayoutConstraint constraintWithItem:_containView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:size.height];
 //    NSLog(@"contain=%f",size.height);
-    
-    [self.view addConstraints:@[con1]];
-    [self.view updateConstraintsIfNeeded];
-    [self.view layoutIfNeeded];
+//    
+//    [self.view addConstraints:@[con2]];
+//    [self.view updateConstraintsIfNeeded];
+//    [self.view layoutIfNeeded];
 
 }
 
@@ -99,7 +111,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    NSLog(@"%@",_detailView1);
+    NSLog(@"%@, contain=%@",_detailView2,NSStringFromCGSize(_backScrollView.contentSize));
     
 }
 

@@ -1044,24 +1044,18 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojT-s2-aSw">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="568" translatesAutoresizingMaskIntoConstraints="NO" id="VAJ-bG-1Gp">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="419"/>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="VAJ-bG-1Gp">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="255"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="nZS-c5-0bL" customClass="YSHTitleDetailView">
-                                                <rect key="frame" x="0.0" y="64" width="320" height="120"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="120" id="f9j-4S-mrV"/>
-                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="3n9-Yn-lZZ" customClass="YSHTitleDetailView">
-                                                <rect key="frame" x="0.0" y="199" width="320" height="120"/>
+                                                <rect key="frame" x="0.0" y="135" width="320" height="120"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="120" id="wUf-dr-lq3"/>
-                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -1070,8 +1064,9 @@
                                             <constraint firstAttribute="trailing" secondItem="3n9-Yn-lZZ" secondAttribute="trailing" id="Jba-Aj-sY2"/>
                                             <constraint firstItem="nZS-c5-0bL" firstAttribute="leading" secondItem="VAJ-bG-1Gp" secondAttribute="leading" id="eaf-vY-qPW"/>
                                             <constraint firstItem="3n9-Yn-lZZ" firstAttribute="top" secondItem="nZS-c5-0bL" secondAttribute="bottom" constant="15" id="nvI-Rv-RhW"/>
-                                            <constraint firstAttribute="bottom" secondItem="3n9-Yn-lZZ" secondAttribute="bottom" constant="100" id="nwB-hs-NTb"/>
+                                            <constraint firstAttribute="bottom" secondItem="3n9-Yn-lZZ" secondAttribute="bottom" id="nwB-hs-NTb"/>
                                             <constraint firstItem="3n9-Yn-lZZ" firstAttribute="leading" secondItem="VAJ-bG-1Gp" secondAttribute="leading" id="pFU-5M-lUs"/>
+                                            <constraint firstItem="nZS-c5-0bL" firstAttribute="top" secondItem="VAJ-bG-1Gp" secondAttribute="top" id="wiH-q0-dtW"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1086,10 +1081,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ojT-s2-aSw" secondAttribute="trailing" id="KXM-Sr-e2T"/>
-                            <constraint firstItem="ojT-s2-aSw" firstAttribute="top" secondItem="pXH-bm-jVQ" secondAttribute="top" id="LHw-Yl-AmL"/>
-                            <constraint firstItem="aEK-uD-4F6" firstAttribute="bottom" secondItem="nZS-c5-0bL" secondAttribute="top" id="Lvf-S3-NUi"/>
                             <constraint firstItem="ojT-s2-aSw" firstAttribute="leading" secondItem="pXH-bm-jVQ" secondAttribute="leading" id="fLI-tC-YoT"/>
                             <constraint firstItem="Oi4-Iw-eIP" firstAttribute="top" secondItem="ojT-s2-aSw" secondAttribute="bottom" id="k6e-Jv-f4Y"/>
+                            <constraint firstItem="ojT-s2-aSw" firstAttribute="top" secondItem="aEK-uD-4F6" secondAttribute="bottom" id="qg8-hd-7ru"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PJd-dg-y0E"/>
